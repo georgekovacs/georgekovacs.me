@@ -436,12 +436,15 @@ main {
 .card:hover .arrow,
 .card:focus-visible .arrow { transform: rotate(45deg); }
 
-/* Result pill (item 5) */
+/* Result pill: bottom-right, vertically centred on the arrow badge (badge centre is 52px from the bottom) */
 .card__result {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  right: 24px;
+  bottom: 24px;
   z-index: 1;
+  max-width: calc(100% - 128px); /* never runs into the badge on the left */
+  text-align: right;
+  transform: translateY(calc(50% - 28px));
   padding: 8px 14px;
   border-radius: 64px;
   background: rgba(255, 255, 255, 0.9);
