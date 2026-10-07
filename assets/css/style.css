@@ -442,8 +442,7 @@ main {
   right: 24px;
   bottom: 24px;
   z-index: 1;
-  max-width: calc(100% - 128px); /* never runs into the badge on the left */
-  text-align: right;
+  white-space: nowrap;
   transform: translateY(calc(50% - 28px));
   padding: 8px 14px;
   border-radius: 64px;
@@ -453,6 +452,12 @@ main {
   color: var(--black);
   font: 600 14px/1.3 var(--font-display);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+/* Hide the pill when the card is too narrow to fit it on one line beside the badge
+   (widest pill ≈ 315px + 128px clear of the badge). Covers phones and tablets. */
+.card__media { container-type: inline-size; }
+@container (max-width: 449px) {
+  .card__result { display: none; }
 }
 
 .card__text { display: flex; flex-direction: column; gap: 8px; }
