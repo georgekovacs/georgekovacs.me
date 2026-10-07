@@ -42,7 +42,6 @@ All motion is turned off under `prefers-reduced-motion`.
 
 ## Additions beyond the Framer site
 
-- **Card results:** a pill on each work card with the headline result (`.card__result`). Logos has none.
 - **Next project:** each case study ends with a link to the next one (Concorde → Vital → Lucy → KBC → Logos → back to Concorde) and an "All work" link.
 - **Homepage intro:** a line above the headline with your name and current role at Tend.nz.
 - **Footer contact:** "Let's talk" opening an email, and a copy-email button. The Contact page has the same copy button.
